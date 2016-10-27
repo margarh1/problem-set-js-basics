@@ -10,3 +10,19 @@
 */
 
 // YOUR CODE HERE
+
+function isDivisibleBy(factor, num) {
+  if (num % factor === 0) {
+    return true;
+  }
+  return false;
+}
+
+function isPrime(num) {
+  for (var idx = 2; idx < num; idx ++) {
+    if (isDivisibleBy(idx, num)) {
+      return false;
+    }
+  }
+  return true;
+}
