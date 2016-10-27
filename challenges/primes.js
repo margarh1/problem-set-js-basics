@@ -26,3 +26,13 @@ function isPrime(num) {
   }
   return true;
 }
+
+function primes(max) {
+  var primeNums = [];
+  for (var idx = 2; idx <= max; idx++) {
+    if (isPrime(idx)) {
+      primeNums.push(idx);
+    }
+  }
+  return primeNums;
+}
