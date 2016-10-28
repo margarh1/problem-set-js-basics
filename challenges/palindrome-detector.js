@@ -23,9 +23,10 @@
 // YOUR CODE HERE
 
 function isPalindrome(word) {
-  var fromBack = word.length - 1;
-  for (var idx = 0; idx < Math.floor(word.length / 2); idx++) {
-    if (word[idx] !== word[fromBack]) {
+  var wordsToCheck = word.toLowerCase().split(' ').join('');
+  var fromBack = wordsToCheck.length - 1;
+  for (var idx = 0; idx < Math.floor(wordsToCheck.length / 2); idx++) {
+    if (wordsToCheck[idx] !== wordsToCheck[fromBack]) {
       return false;
     }
     fromBack--;
@@ -34,3 +35,4 @@ function isPalindrome(word) {
 }
 
 isPalindrome('racecar');
+isPalindrome('Pull up if I pull up');

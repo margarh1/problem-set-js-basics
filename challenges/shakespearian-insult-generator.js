@@ -18,8 +18,9 @@ var third_word = ["wagtail", "whey-face", "vassal", "varlet", "strumpet", "skain
 
 // YOUR CODE HERE
 
-function generateInsult(numOfWords, name) {
+function generateInsult(numOfWords) {
   var insult = '';
+  var name = prompt('Enter the name of someone you want to insult:');
   for (var idx = numOfWords; idx >= 1; idx--) {
     if (idx === 1) {
       insult_num = Math.round(Math.random() * third_word.length);
